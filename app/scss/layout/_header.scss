@@ -5,16 +5,13 @@
 ================================================================================
 */
 header{
-	// background:#f0f0f0 url(../img/bg_header.jpg) no-repeat left top;
 	width:100%;
-	// height: 80px;
 	min-width: $min-width;
 	text-align:left;
 	order: 1;
     -webkit-order: 1;
 
 	.wrapper {
-		max-width: 1240px;
 		width: 100%;
 
 		@include respond-to(handhelds) {
@@ -37,9 +34,8 @@ header{
 .header__top {
     display: flex;
     flex-direction: row;
-    padding: 30px 56px;
+    padding: 45px 65px 0;
     box-sizing: border-box;
-	align-items: center;
 	@include respond-to(handhelds) {
 		padding: 20px;
 	}
@@ -48,6 +44,7 @@ header{
 .header__logo {
 	display: inline-block;
 	// max-width: 243px;
+	padding-top: 4px;
 	min-width: 250px;
     margin-right: 43px;
 
@@ -76,13 +73,14 @@ header{
     max-width: 496px;
 	min-width: 220px;
     width: 100%;
-    margin-right: 90px;
+    margin-right: 75px;
 }
 
 .header__tel {
     font-size: 1.8em;
     line-height: inherit;
     margin-right: 16px;
+	margin-top: 9px;
 }
 
 .header__info {
@@ -133,10 +131,12 @@ nav ul li a {
 
 .navbar-component {
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 27px;
+    padding: 0px 52px 0;
 }
 
 .main-menu {
+	border-top: 1px solid #dddfdf;
 	border-bottom: 1px solid #dddfdf;
 	@include respond-to(tablets) {
 		border-bottom: none;
@@ -151,7 +151,6 @@ nav ul li a {
 }
 .topmenu {
 	display: flex;
-	padding-left: 10px;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
@@ -166,15 +165,16 @@ nav ul li a {
 	> li {
 	    float: left;
 	    position: relative;
-	    font-family: 'Open Sans', sans-serif;
+
 
 		& > a {
 		    text-transform: uppercase;
-		    font-size: 1.2em;
-		    font-weight: bold;
+		    font-size: 1rem;
 		    color: #171717;
-		    padding: 20px 7px;
+		    padding: 20px 10px;
 			box-sizing: border-box;
+			font-family: 'Open Sans Bold', sans-serif;
+			letter-spacing: -1px;
 
 			@include respond-to(handhelds) {
 				font-size: 1em;
@@ -204,6 +204,11 @@ nav ul li a {
     content: "\f0ca";
     font-family: "FontAwesome";
     color: #cb944c;
+	margin-right: 5px;
+}
+
+.submenu-link:first-child{
+	padding-left: 15px;
 }
 .submenu-link__item {
 	@include respond-to(handhelds) {
@@ -390,6 +395,7 @@ nav ul li a {
 	position: relative;
 	align-items: center;
 	font-family: 'Open Sans', sans-serif;
+	flex-grow: 1;
 
 	@include respond-to(handhelds) {
 		justify-content: center;
@@ -406,15 +412,17 @@ nav ul li a {
 .account-cart-wrapper li {
 	display: inline-block;
 	text-transform: uppercase;
-	font-size: 1em;
+	font-size: 0.9rem;
 	font-weight: bold;
 	color: #171717;
 	padding: 20px 0;
+
 
 	span {
 		display: inline-flex;
 		background: #d0a46e;
 		border-radius: 50%;
+		font-size: 0.9rem;
 		padding: 2px;
 		width: 21px;
 		height: 21px;
@@ -452,7 +460,7 @@ nav ul li a {
 	height: 2px;
 	width: 16px;
 	margin-bottom: 8px;
-    	transition: .3s ease-in;
+	transition: .3s ease-in;
 }
 
 .icon::before,
